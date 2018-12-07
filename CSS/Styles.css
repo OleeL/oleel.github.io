@@ -58,13 +58,14 @@ nav a:nth-child(2) {
 /* header */
 
 header {
-	margin: 50px 0 300px 60px;
+	margin: 50px 0 150px 60px;
 }
 
 header p {
 	width: 100%;
 	margin-top: 10px;
 	text-align: left;
+	font-size: 21px;
 }
 
 /* .work */
@@ -135,7 +136,7 @@ a:hover {
 @media only screen and (max-width: 991px) {
 	header {
 		text-align: left;
-		margin: 40px 0 200px 30px;
+		margin: 40px 0 50px 30px;
 	}
 
 	header h1 {
@@ -143,7 +144,7 @@ a:hover {
 	}
 
 	header p {
-		font-size: 12px;
+		font-size: 14px;
 		width: 90%;
 	}
 
@@ -161,7 +162,7 @@ a:hover {
 	}
 
 	.header2 p {
-		font-size: 12px;
+		font-size: 14px;
 		width: 90%;
 	}
 
