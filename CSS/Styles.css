@@ -58,11 +58,11 @@ nav a:nth-child(2) {
 /* header */
 
 header {
-	margin: 100px 0 200px 120px;
+	margin: 50px 0 300px 60px;
 }
 
 header p {
-	width: 60%;
+	width: 100%;
 	margin-top: 10px;
 	text-align: left;
 }
@@ -70,6 +70,7 @@ header p {
 /* .work */
 
 .work {
+	clear: left;
 	text-align: center;
 	width: 100%;
 }
@@ -86,13 +87,13 @@ header p {
 }
 
 .profpic img{
-	margin: 1%;
-	width: 25%;
+	margin: 3%;
+	width: 300px;
 	float: left;
 }
 
 .proftext{
-	padding: 0px 275px;
+	padding: 30px 0 0 0
 }
 
 
@@ -134,7 +135,7 @@ a:hover {
 @media only screen and (max-width: 991px) {
 	header {
 		text-align: left;
-		margin: 100px 0 100px 30px;
+		margin: 40px 0 200px 30px;
 	}
 
 	header h1 {
