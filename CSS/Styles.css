@@ -64,6 +64,7 @@ header {
 header p {
 	width: 60%;
 	margin-top: 10px;
+	text-align: left;
 }
 
 /* .work */
@@ -77,6 +78,23 @@ header p {
 	margin: 1%;
 	width: 45%;
 }
+
+/* .profpic */
+
+.profpic{
+	text-align: left;
+}
+
+.profpic img{
+	margin: 1%;
+	width: 25%;
+	float: left;
+}
+
+.proftext{
+	padding: 0px 275px;
+}
+
 
 /* header2 */
 
