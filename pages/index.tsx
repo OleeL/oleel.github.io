@@ -5,12 +5,17 @@ import create from 'zustand';
 import ImageButton from '../components/ImageButton';
 import ParticleBackdrop from '../components/ParticleBackdrop';
 import TiltingDiv from '../components/TiltingDiv';
+import router from 'next/dist/client/router';
 
 const pic_github = '/images/logos/ghlogo.svg';
 const pic_email = '/images/logos/emlogo.svg';
 const pic_linkedin = '/images/logos/lilogo.svg';
 const pic_phone = '/images/logos/phlogo.svg';
 const pic_profile = '/images/profilepic.webp';
+
+const getTel = (args) => {
+    return args + "tel:+447939922443";
+}
 
 type IStore = {
     relocate: boolean;
@@ -105,6 +110,11 @@ const Content = ({children}) => {
     )
 }
 
+const handleClick = (e, href) => {
+    e.preventDefault();
+    router.replace(href);
+}
+
 const Footer = () => {
     return (
         <div>
@@ -115,17 +125,14 @@ const Footer = () => {
                     src={pic_github}
                     alt="GitHub" />
                 <ImageButton
-                    href="mailto:oliglegg@hotmail.co.uk"
+                    href={e => e.preventDefault()}
+                    onClick={e => handleClick(e, "mailto:oliglegg@hotmail.co.uk")}
                     src={pic_email}
                     alt="Email" />
                 <ImageButton
                     href="https://linkedin.com/in/leggoli"
                     src={pic_linkedin}
                     alt="LinkedIn" />
-                <ImageButton
-                    href="tel:+447939922443"
-                    src={pic_phone}
-                    alt="Mobile number" />
             </div>
             {/* <PortfolioLink /> */}
         </div>

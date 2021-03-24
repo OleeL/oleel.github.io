@@ -7,16 +7,11 @@ const ButtonStyle = css`
         width: 6vmin;
         height: 6vmin;
         margin: 2vmin;
+        cursor: pointer;
     }
 `
 
-interface IButton {
-    href: string;
-    src: string;
-    alt: string;
-}
-
-const ImageButton: FC<IButton> = ({href, src, alt}) => {
+const ImageButton: FC<any> = (args) => {
     const [hovering, setHovering] = useState(false);
     const spring = useSpring({
         transform: hovering ? `scale(1.2)` : `scale(1)`
@@ -24,12 +19,12 @@ const ImageButton: FC<IButton> = ({href, src, alt}) => {
 
     return (
         <animated.a
-            style={spring}
-            href={href}
-            onMouseEnter={() => {setHovering(true);}}
-            onMouseLeave={() => {setHovering(false)}}>
+                style={spring}
+                onMouseEnter={() => {setHovering(true)}}
+                onMouseLeave={() => {setHovering(false)}}
+                {...args}>
             <style jsx>{ButtonStyle}</style>
-            <img src={src} alt={alt} />
+            <img src={args?.src} />
         </animated.a>
     )
 }
