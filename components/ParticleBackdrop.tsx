@@ -26,11 +26,11 @@ const ParticleBackdrop = () =>
                     },
                     "line_linked": {
                         "enable": true,
-                        "opacity": 0.02
+                        "opacity": 0.09
                     },
                     "move": {
                         "direction": "right",
-                        "speed": 0.05
+                        "speed": 0.6
                     },
                     "size": {
                         "value": 1

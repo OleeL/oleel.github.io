@@ -39,11 +39,13 @@ const AppStyle = css`
 const PageStyle = css`
     div {
         min-height: 100vh;
+        max-width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         position: relative;
+        text-align: center;
     }
 
     img {
@@ -72,18 +74,18 @@ const FooterStyle = css`
 
 const ContentStyle = css`
     div {
+        min-width: 200px;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
         background-color: #1e2128;
-        padding: 5vmin;
-        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.6);
-        border-radius: 50px;
+        padding: 10vmin;
+        box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.8);
+        border-radius: 10px;
     }
 `
 
-const App = () =>
-    <div>
-        <style jsx>{AppStyle}</style>
-        <Page />
-    </div>
+const App = () => <Page />
 
 const Page = () =>
     <div>
@@ -118,25 +120,20 @@ const handleClick = (e, href) => {
 const Footer = () => {
     return (
         <div>
-            <div>
-                <style jsx>{FooterStyle}</style>
-                <ImageButton
-                    href="https://github.com/OleeL"
-                    src={pic_github}
-                    alt="GitHub" />
-                <ImageButton
-                    href={e => e.preventDefault()}
-                    onClick={e => handleClick(e, "mailto:oliglegg@hotmail.co.uk")}
-                    src={pic_email}
-                    alt="Email" />
-                <ImageButton
-                    href="https://linkedin.com/in/leggoli"
-                    src={pic_linkedin}
-                    alt="LinkedIn" />
-            </div>
-            {/* <PortfolioLink /> */}
+            <style jsx>{FooterStyle}</style>
+            <ImageButton
+                href="https://github.com/OleeL"
+                src={pic_github}
+                alt="GitHub" />
+            <ImageButton
+                onClick={e => handleClick(e, "mailto:oliglegg@hotmail.co.uk")}
+                src={pic_email}
+                alt="Email" />
+            <ImageButton
+                href="https://linkedin.com/in/leggoli"
+                src={pic_linkedin}
+                alt="LinkedIn" />
         </div>
-
     )
 }
 

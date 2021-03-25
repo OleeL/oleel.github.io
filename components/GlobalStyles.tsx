@@ -48,10 +48,8 @@ const GlobalStyles = css.global`
     }
 
     body {
-        
         font-size: calc(2.5vmin);
         color: #E5E5E5;
-        box-shadow: inset 0px 0px 75px -1px rgba(0,0,0,0.75);
         background-color: #282c34;
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
