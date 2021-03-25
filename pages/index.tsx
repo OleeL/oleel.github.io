@@ -13,10 +13,6 @@ const pic_linkedin = '/images/logos/lilogo.svg';
 const pic_phone = '/images/logos/phlogo.svg';
 const pic_profile = '/images/profilepic.webp';
 
-const getTel = (args) => {
-    return args + "tel:+447939922443";
-}
-
 type IStore = {
     relocate: boolean;
     setRelocate: (relocate: boolean) => void;
@@ -74,14 +70,15 @@ const FooterStyle = css`
 
 const ContentStyle = css`
     div {
-        min-width: 200px;
-        min-height: 200px;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         background-color: #1e2128;
-        padding: 10vmin;
+        padding: 5vmin;
         box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.8);
         border-radius: 10px;
+        justify-content: center;
     }
 `
 
@@ -91,22 +88,16 @@ const Page = () =>
     <div>
         <style jsx>{PageStyle}</style>
         <ParticleBackdrop />
-
-        <Content>
-
-            {/* <img src={pic_profile} alt="Oliver Legg" /> */}
-            <h1>Oliver Legg</h1>
-            <Footer />
-        </Content>
-
+        <Content />
     </div>
 
-const Content = ({children}) => {
+const Content = () => {
     return (
-        <TiltingDiv>
+        <TiltingDiv style={{width: '50vmin', height: '30vmin'}}>
             <div>
-            {children}
-            <style jsx>{ContentStyle}</style>
+                <h1>Oliver Legg</h1>
+                <Footer />
+                <style jsx>{ContentStyle}</style>
             </div>
         </TiltingDiv>
     )

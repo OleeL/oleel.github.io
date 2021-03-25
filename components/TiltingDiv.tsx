@@ -11,16 +11,16 @@ const calc = (x: number, y: number) =>
 const rotate = (x,y): string => 
     `perspective(600px) rotateX(${x}deg) rotateY(${y}deg)`
     
-interface IInteractive { className?: string }
+interface IInteractive { className?: string, style?: object }
 
-export const TiltingDiv: FC<IInteractive> = ({children, className}) => {
+export const TiltingDiv: FC<IInteractive> = ({children, className, style}) => {
     const [spring, set] = useSpring(() => Spring);
 
     return (
         <animated.div
             className={className}
             //@ts-ignore
-            style={{transform: spring.xy.interpolate(rotate) }}
+            style={{transform: spring.xy.interpolate(rotate), ...style}}
             onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
             onMouseLeave={() => set({ xy: [0, 0] })}>
                 {children}
