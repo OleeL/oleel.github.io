@@ -70,10 +70,6 @@ const FooterStyle = css`
 
 const ContentStyle = css`
     div {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
         background-color: #1e2128;
         padding: 5vmin;
         box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.8);
@@ -93,7 +89,7 @@ const Page = () =>
 
 const Content = () => {
     return (
-        <TiltingDiv style={{width: '50vmin', height: '30vmin'}}>
+        <TiltingDiv style={{width: '50vmin', height: '40vmin'}}>
             <div>
                 <h1>Oliver Legg</h1>
                 <Footer />
